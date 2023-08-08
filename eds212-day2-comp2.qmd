@@ -31,6 +31,12 @@ df_dz = D(fxyz, 'z')
 ## Penguins plot
 
 ```{r}
-ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) +
-  geom_point()
+# if you are changing based on variable value, it should be in aes(). if you are changing based on a constant, it should be in geom_point()
+ggplot(data = penguins, 
+       aes(x = body_mass_g, y = flipper_length_mm, color = species)) +
+  geom_point() +
+  labs( x = "Flipper Length (mm)", 
+        y = "Body mass (g)", 
+        title = "Palmer penguins body dimensions") +
+  theme_minimal()
 ```
