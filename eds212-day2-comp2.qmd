@@ -1,5 +1,4 @@
 ---
-use---
 title: "eds212-day2-comp2"
 ---
 
@@ -27,4 +26,11 @@ df_dy = D(fxyz, 'y')
 df_dz = D(fxyz, 'z')
 
 
+```
+
+## Penguins plot
+
+```{r}
+ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) +
+  geom_point()
 ```
